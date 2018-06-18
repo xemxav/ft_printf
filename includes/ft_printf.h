@@ -6,7 +6,7 @@
 /*   By: xmoreau <xmoreau@student.le-101.fr>        +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/04/19 10:23:15 by xmoreau      #+#   ##    ##    #+#       */
-/*   Updated: 2018/04/19 10:59:08 by xmoreau     ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/06/06 16:48:06 by xmoreau     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -17,7 +17,6 @@
 # include <unistd.h>
 # include <string.h>
 # include <stdlib.h>
-# include "../libft/libft.h"
 # include <stdarg.h>
 # include <stdint.h>
 # include <wchar.h>
@@ -72,6 +71,12 @@ typedef struct	s_toprint
 }				t_toprint;
 
 int				ft_printf(const char *fmt, ...);
+int				fd_printf(int fd, const char *fmt, ...);
+int				parsing_pf(const char *fmt, va_list ap, t_toprint *to_print);
+int				outcome(t_result *result, const char *fmt, int i, va_list ap);
+void			join_buffer(const char *fmt, t_toprint *to_print,
+				int start, int i);
+void			join_result(t_toprint *to_print, t_result *result);
 void			init_infos(t_infos *infos);
 void			init_result(t_result *result);
 void			free_result(t_result *result);

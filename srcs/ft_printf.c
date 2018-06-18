@@ -6,14 +6,14 @@
 /*   By: xmoreau <xmoreau@student.le-101.fr>        +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/03/29 14:40:52 by xmoreau      #+#   ##    ##    #+#       */
-/*   Updated: 2018/04/19 10:58:48 by xmoreau     ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/05/14 14:42:48 by xmoreau     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
 
-static void		join_result(t_toprint *to_print, t_result *result)
+void			join_result(t_toprint *to_print, t_result *result)
 {
 	char		*tmp;
 
@@ -39,7 +39,7 @@ static void		join_result(t_toprint *to_print, t_result *result)
 	to_print->print_size += result->res_size;
 }
 
-static void		join_buffer(const char *fmt, t_toprint *to_print,
+void			join_buffer(const char *fmt, t_toprint *to_print,
 				int start, int i)
 {
 	char		*tmp;
@@ -67,7 +67,7 @@ static void		join_buffer(const char *fmt, t_toprint *to_print,
 	to_print->print_size += len;
 }
 
-static int		outcome(t_result *result, const char *fmt, int i, va_list ap)
+int				outcome(t_result *result, const char *fmt, int i, va_list ap)
 {
 	init_result(result);
 	start_processing(fmt + i + 1, ap, result);
@@ -79,7 +79,7 @@ static int		outcome(t_result *result, const char *fmt, int i, va_list ap)
 	return (0);
 }
 
-static int		parsing_pf(const char *fmt, va_list ap, t_toprint *to_print)
+int				parsing_pf(const char *fmt, va_list ap, t_toprint *to_print)
 {
 	int			i;
 	int			start;

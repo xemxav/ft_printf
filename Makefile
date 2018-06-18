@@ -6,7 +6,7 @@
 #    By: xmoreau <xmoreau@student.le-101.fr>        +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2018/04/03 15:16:05 by xmoreau      #+#   ##    ##    #+#        #
-#    Updated: 2018/04/19 10:57:19 by xmoreau     ###    #+. /#+    ###.fr      #
+#    Updated: 2018/05/14 14:46:51 by xmoreau     ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
@@ -33,7 +33,8 @@ OBJS = ./srcs/ft_printf.o \
 		./srcs/precision.o \
 		./srcs/run_big_s.o \
 		./srcs/run_big_c.o \
-		./srcs/width_for_chr.o
+		./srcs/width_for_chr.o \
+		./srcs/fd_printf.o \
 
 all: $(NAME)
 
