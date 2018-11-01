@@ -1,5 +1,5 @@
 # ft_printf
-The first project of the algorithm branch of the 42 cursus curriculum.
+The first project of the algorithm branch of the 42 curriculum.
 
 The project makes a libftprintf.a in order to include it in other project or in our libft.
 
